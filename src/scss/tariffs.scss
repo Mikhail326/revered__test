@@ -34,9 +34,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
 
   @media (max-width: 800px) {
     min-height: auto;
+  }
+
+  &:nth-child(1) {
+    animation: opacity 1.5s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
   }
 
   &:nth-child(2) {
@@ -47,6 +54,10 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--dark);
+    z-index: 10;
+    animation: opacity 1.5s ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 
     @media (max-width: 1024px) {
       width: 250px;
@@ -58,6 +69,12 @@
       width: auto;
       min-height: auto;
     }
+  }
+
+  &:nth-child(3) {
+    animation: opacity 1.5s ease;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
   }
 
   &__info {
@@ -178,4 +195,13 @@
 
 .features-active {
   color: var(--light);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
