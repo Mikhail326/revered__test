@@ -45,6 +45,15 @@ h2 {
   line-height: normal;
   margin-bottom: 69px;
   text-align: center;
+
+  @media (max-width: 800px) {
+    font-size: 30px;
+  margin-bottom: 40px;
+  }
+
+  @media (max-width: 570px) {
+   font-size: 24px;
+  }
 }
 
 .container {
