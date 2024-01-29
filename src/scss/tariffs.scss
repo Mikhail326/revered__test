@@ -42,7 +42,7 @@
 
   &:nth-child(1) {
     animation: opacity 1.5s ease;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
   }
 
@@ -56,7 +56,7 @@
     background-color: var(--dark);
     z-index: 10;
     animation: opacity 1.5s ease;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
     @media (max-width: 1024px) {
@@ -73,7 +73,7 @@
 
   &:nth-child(3) {
     animation: opacity 1.5s ease;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
   }
 
@@ -102,6 +102,11 @@
     font-weight: 500;
     line-height: 14.536px;
     cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: var(--btn-hover);
+    }
   }
 
   &__value {
@@ -118,6 +123,11 @@
     align-self: flex-end;
     margin-bottom: 10px;
     cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: var(--btn-hover);
+    }
   }
 
   &__text {
