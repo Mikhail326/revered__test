@@ -1,6 +1,5 @@
 .header {
   padding-top: 34.5px;
-  margin-bottom: 46px;
   position: relative;
 
   @media(max-width: 900px) {
@@ -78,11 +77,14 @@
   }
 
   @media(max-width: 900px) {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     width: 100%;
     background-color: var(--menu-bg);
     position: absolute;
     top: 82px;
-    right: -200%;
+    right: 0;
     z-index: 999;
     transition: 0.3s linear;
   }
@@ -146,6 +148,14 @@
   }
 }
 
+.login-link {
+  @media(max-width: 900px) {
+    font-size: 12px;
+  }
+}
+
 .active-menu {
-  right: 0;
+  opacity: 1;
+  overflow: visible;
+  max-height: 50vh;
 }
